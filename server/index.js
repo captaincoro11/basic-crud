@@ -19,11 +19,8 @@ app.use('/task',taskRoutes)
 const port = process.env.port || 5000;
 
 app.get('/',(req,res)=>{
-    res.status(200).json({
-        message:"Hello Intern"
-    })
+    res.json("HELLO BABY")
 })
-
 
 
 
