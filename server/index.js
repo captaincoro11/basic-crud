@@ -4,14 +4,15 @@ const dotenv = require('dotenv');
 const { connectDatabase } = require('./db');
 const userRoutes = require('./routes/user');
 const taskRoutes = require('./routes/task');
-const cors = require('cors')
+const cors = require('cors');
+const bodyParser = require('body-parser')
 
 
 dotenv.config({});
 
 connectDatabase();
 app.use(cors());
-app.use(express.json())
+app.use(bodyParser.json())
 app.use('/user',userRoutes)
 app.use('/task',taskRoutes)
 
